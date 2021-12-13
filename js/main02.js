@@ -49,6 +49,11 @@ function loadJson(jsonFile) {
           rotate: 0,
           slideShadows: false,
           depth: 1000,
+          stretch: 0,
+        },
+        pagination: {
+          el: "#main .pagination",
+          clickable: true,
         },
         mousewheel: true,
       });

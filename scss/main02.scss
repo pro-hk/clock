@@ -57,4 +57,20 @@
       }
     }
   }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .swiper-pagination-bullet {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #fff;
+      opacity: 1;
+      background-color: transparent;
+      transition: 0.25s;
+      &-active {
+        background-color: #fff;
+      }
+    }
+  }
 }
