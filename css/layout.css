@@ -18,4 +18,8 @@ img { vertical-align: top; }
 
 #header #gnb ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-#header #gnb ul a { height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-weight: 500; padding: 0 40px; }
+#header #gnb ul li.selected a:after { opacity: 1; }
+
+#header #gnb ul a { height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-weight: 500; padding: 0 40px; position: relative; }
+
+#header #gnb ul a:after { content: ""; display: block; width: 8px; height: 8px; background: #f00; border-radius: 100%; position: absolute; bottom: 5px; left: calc(50% - 4px); opacity: 0; -webkit-transition: 0.25s; transition: 0.25s; }

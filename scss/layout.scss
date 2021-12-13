@@ -4,6 +4,7 @@ html {
   font-size: 10px;
 }
 body {
+  // overflow-y: hidden !important; - 스크롤없앰
   font-size: 1.6rem;
   font-family: "Raleway", "Noto Sans KR", sans-serif;
   color: #111;
@@ -44,12 +45,29 @@ img {
     ul {
       display: flex;
       justify-content: center;
+      li.selected a:after {
+        opacity: 1;
+      }
       a {
         height: 50px;
         display: flex;
         align-items: center;
         font-weight: 500;
         padding: 0 40px;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          background: #f00;
+          border-radius: 100%;
+          position: absolute;
+          bottom: 5px;
+          left: calc(50% - 4px);
+          opacity: 0;
+          transition: 0.25s;
+        }
       }
     }
   }
